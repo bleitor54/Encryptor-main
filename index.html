@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Encryptor</title>
+    <link rel="icon" href="content/img/Logo.png">
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+</head>
+<body>
+    <Main>
+        <section class="principal-content principal-content__user-interaction">
+            <img class="principal-content__icon" src="content/img/Logo.png" alt="">
+            <div class="user-interaction">
+                <textarea id="text_input" class="user-interaction__input" placeholder="Enter text here"></textarea>
+                <div class="user-interaction__warning">
+                    <p id="warningText" class="user-interaction__warning__text"><span class="user-interaction__warning__icon">!</span>Lowercase letters only and no accents</p>
+                </div>
+                <button onclick="encrypt()" id="encryptButton" class="user-interaction__button user-interaction__button--blue">Encrypt</button>
+                <button onclick="decrypt()" class="user-interaction__button user-interaction__button--grey">Decrypt</button>
+            </div>
+        </section>
+        <section class="principal-content principal-content__user-result">
+            <div id="resultContainer" class="user-result">
+                <img id="resultImage" class="user-result__img" src="content/img/Muñeco.png" alt="">
+                <h2 id="resultTittle" class="user-result__tittle">No message was found</h2>
+                <p id="resultText" class="user-result__p">Enter the text you want to encrypt or decrypt.</p>
+                <textarea readonly id="textOutput" class="user-result__output" placeholder="" hidden></textarea>
+                <button onclick="copy()" id="copyButton" class="user-interaction__button user-result__button--grey" hidden>Copy</button>
+            </div>
+            <div id="copyAlert" class="copy-alert">Copiado</div>
+        </section>
+    </Main>
+</body>
+</html>
